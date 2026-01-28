@@ -1,59 +1,107 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# 🏛️ CMS Website Kemenag Bangka Selatan
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+[![Laravel 12](https://img.shields.io/badge/Laravel-12.x-red.svg)](https://laravel.com)
+[![Filament PHP](https://img.shields.io/badge/Filament-v3-orange.svg)](https://filamentphp.com)
+[![Tailwind CSS](https://img.shields.io/badge/Tailwind-3.x-blue.svg)](https://tailwindcss.com)
+[![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 
-## About Laravel
+Sistem Manajemen Konten (CMS) resmi untuk **Kantor Kementerian Agama Kabupaten Bangka Selatan**. Dibangun untuk memodernisasi layanan informasi publik, pengelolaan berita, dan transparansi data keagamaan di wilayah Bangka Selatan.
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+---
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+## ✨ Fitur Utama
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+* **Advanced Dashboard:** Visualisasi data berita dan statistik layanan masyarakat.
+* **Content Management:** Pengelolaan artikel, kategori, dan tag dengan fitur *draft/publish*.
+* **Service Integration:** Manajemen modul layanan seperti pendaftaran Haji, Nikah, dan sertifikasi Halal.
+* **Media Library:** Manajemen file gambar dan dokumen terpusat dengan kompresi otomatis.
+* **Dynamic Pages:** Kemampuan membuat halaman statis (Profil, Visi Misi) tanpa menyentuh kode.
+* **Role Based Access Control (RBAC):** Keamanan berlapis untuk Admin, Editor, dan Staff melalui kebijakan akses yang ketat.
+* **SEO Optimized:** Meta data otomatis untuk meningkatkan visibilitas di mesin pencari.
 
-## Learning Laravel
+---
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework. You can also check out [Laravel Learn](https://laravel.com/learn), where you will be guided through building a modern Laravel application.
+## 🛠️ Tech Stack
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+- **Framework:** [Laravel 12](https://laravel.com) (Modern PHP Framework)
+- **Admin Panel:** [FilamentPHP v3](https://filamentphp.com) (TALL Stack)
+- **Styling:** [Tailwind CSS](https://tailwindcss.com)
+- **Frontend Interactivity:** [Alpine.js](https://alpinejs.dev/)
+- **Database:** MySQL 8.0 / MariaDB
 
-## Laravel Sponsors
+---
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+## 🚀 Panduan Instalasi
 
-### Premium Partners
+### Prasyarat
+* PHP >= 8.3
+* Composer
+* Node.js & NPM
+* MySQL/PostgreSQL
 
-- **[Vehikl](https://vehikl.com)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Redberry](https://redberry.international/laravel-development)**
-- **[Active Logic](https://activelogic.com)**
+### Langkah-langkah
 
-## Contributing
+1.  **Clone Repositori**
+    ```bash
+    git clone [https://github.com/username/cms-kemenag-basel.git](https://github.com/username/cms-kemenag-basel.git)
+    cd cms-kemenag-basel
+    ```
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+2.  **Install Dependensi**
+    ```bash
+    composer install
+    npm install
+    ```
 
-## Code of Conduct
+3.  **Konfigurasi Environment**
+    ```bash
+    cp .env.example .env
+    # Sesuaikan DB_DATABASE, DB_USERNAME, dan DB_PASSWORD di file .env
+    ```
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+4.  **Generate Key & Migrasi**
+    ```bash
+    php artisan key:generate
+    php artisan migrate --seed
+    ```
 
-## Security Vulnerabilities
+5.  **Build Aset Frontend**
+    ```bash
+    npm run build
+    ```
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+6.  **Selesai**
+    ```bash
+    php artisan serve
+    ```
+    Buka `http://localhost:8000/admin` untuk mengakses panel dashboard.
 
-## License
+---
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+## 📂 Struktur Folder Utama
+
+* `app/Filament/` - Konfigurasi panel admin, resource, dan widget.
+* `app/Models/` - Struktur data dan relasi antar entitas.
+* `resources/views/` - Template frontend website.
+* `public/storage/` - Direktori aset yang diunggah.
+
+---
+
+## 🤝 Kontribusi
+
+Jika Anda ingin berkontribusi pada proyek ini:
+1. Fork repositori ini.
+2. Buat branch fitur baru (`git checkout -b fitur/NamaFitur`).
+3. Commit perubahan Anda (`git commit -m 'Menambah fitur X'`).
+4. Push ke branch (`git push origin fitur/NamaFitur`).
+5. Buat Pull Request.
+
+---
+
+## 📄 Lisensi
+
+Proyek ini berada di bawah lisensi [MIT](LICENSE).
+
+---
+
+**Developed with ❤️ for Kemenag Bangka Selatan.**
