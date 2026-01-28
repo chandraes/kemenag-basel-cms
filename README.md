@@ -43,8 +43,8 @@ Sistem Manajemen Konten (CMS) resmi untuk **Kantor Kementerian Agama Kabupaten B
 
 1.  **Clone Repositori**
     ```bash
-    git clone [https://github.com/username/cms-kemenag-basel.git](https://github.com/username/cms-kemenag-basel.git)
-    cd cms-kemenag-basel
+    git clone [https://github.com/chandraes/kemenag-basel-cms.git](https://github.com/chandraes/kemenag-basel-cms.git)
+    cd kemenag-basel-cms
     ```
 
 2.  **Install Dependensi**
@@ -74,7 +74,7 @@ Sistem Manajemen Konten (CMS) resmi untuk **Kantor Kementerian Agama Kabupaten B
     ```bash
     php artisan serve
     ```
-    Buka `http://localhost:8000/admin` untuk mengakses panel dashboard.
+    Buka `http://localhost:8000/adxadm` untuk mengakses panel dashboard.
 
 ---
 
@@ -104,4 +104,4 @@ Proyek ini berada di bawah lisensi [MIT](LICENSE).
 
 ---
 
-**Developed with ❤️ for Kemenag Bangka Selatan.**
+**Developed by [Chandraes](https://github.com/chandraes) for Kemenag Bangka Selatan.**
